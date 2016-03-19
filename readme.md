@@ -22,6 +22,19 @@ The only prerequisite for this project is [node.js](https://nodejs.org/en/). Pre
 
         npm install
 
+- Create a key file:
+
+        touch src/PlaceMapper/keys.js
+
+    - This module needs to export an object with a key of `key` and it's value is your google maps api key. e.g.:
+
+            // src/PlaceMapper/keys.js
+            module.exports = {
+                key: 'YOURGOOGLEMAPSAPIKEYHERE'
+            };
+
+    - For details on how to generate an api key, see [google's instructions for generating an API key.](https://developers.google.com/maps/documentation/javascript/get-api-key)
+
 - Start the webpack-dev-server via npm script:
 
         npm run dev
